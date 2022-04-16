@@ -9,19 +9,17 @@ void swap(int *x,int*y){
 
 }
 
-void selectionSort(int arr[], int n)
-{
-    int i,j,min_idx;
-    for(i=0;i<n;i++)
-    {
-        min_idx = i;
-        for(j=i+1;j<n;j++)
-            if (arr[j] < arr[min_idx]){
-
-                min_idx = j;
+void selectionSort(int arr[],int n){
+        int i,j,min_idx;
+        for(i = 0; i<n;i++){
+            min_idx = i;
+            for(j=i+1;j<n;j++){
+                if(arr[j] < arr[min_idx]){
+                    min_idx = j;
+                }
             }
-        swap(arr[i],arr[min_idx]);
-    }
+                swap(&arr[i],&arr[min_idx]);
+        }
 }
 
 void print(int arr[], int size) 
